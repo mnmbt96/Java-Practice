@@ -14,18 +14,24 @@ public class Student {
   //オーバーロード
   //引数を１つだけ受け取るコンストラクタと、引数を３つ受け取るコンストラクタをそれぞれ書くことができる。
   
+  //コンストラクタ
   Student(String n){
     name = n;
   }
   
+  //コンストラクタ２つ目　オーバーロード
   Student(String n, int e, int m){
     name = n;
     engScore = e;
     mathScore = m;
   }
+
+  //デフォルトコンストラクタ
+  //これがないと別ファイルから呼び出すときに、引数の型や数が違っているとエラーになる
+  //本来は引数のないデフォルトコンストラクタが自動で作成されているが、
+  //上記のようにコンストラクタを記述した場合はデフォルトコンストラクターは動作しないため、デフォルトコンストラクタが必要な場合は記述する必要がある。
   Student(){}
 
-  //display
 public void display(){
   System.out.println("Name: " + name);
   System.out.println("English Score: " + engScore);
